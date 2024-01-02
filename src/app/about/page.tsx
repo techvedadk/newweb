@@ -209,7 +209,7 @@ export default async function About() {
 
       <Culture />
 
-      <Team />
+			{/* <Team /> */}
 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
