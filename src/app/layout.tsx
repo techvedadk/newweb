@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Techveda',
-    default: 'Techveda - Aawrd winning developer studio based in Denmark',
+		default: 'Techveda - Customer foccused developer studio based in Denmark',
   },
 }
 
