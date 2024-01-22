@@ -10,14 +10,16 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import bloc from '@/images/clients/bloc/logo-light.svg'
+import google from '@/images/clients/google/logo-light.svg'
+import riverpod from '@/images/clients/riverpod/logo-light.svg'
+import etiya from '@/images/clients/etiya/logo-light.svg'
+import stride from '@/images/clients/stride/logo-light.png'
+import bearPeak from '@/images/clients/bearpeak/logo-light.svg'
+import strapt from '@/images/clients/strapt/logo-light.svg'
+import minlandsBy from '@/images/clients/minlandsby/logo-light.svg'
+import overlapp from '@/images/clients/overlapp/logo-light.png'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -97,21 +99,22 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Google', google],
+  ['Bloc', bloc],
+  ['Riverpod', riverpod],
+  ['Etiya', etiya],
+  ['BearPeak', bearPeak],
+  ['Strapt', strapt],
+  ['MinlandsBy', minlandsBy],
+  ['Stride', stride],
+  ['Overlapp', overlapp],
 ]
 
 function Clients() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-16 lg:mt-56">
       <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+        <h2 className="font-display text-2xl font-semibold text-white">
           You’re in good company
         </h2>
       </FadeIn>
@@ -125,7 +128,7 @@ function Clients() {
             <li key={client} className="group">
               <FadeIn className="overflow-hidden">
                 <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={client} height={80} unoptimized />
                 </Border>
               </FadeIn>
             </li>
@@ -162,7 +165,7 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'Mail Smirk', logo: google }}
       >
         We approached <em>Studio</em> because we loved their past work. They
         delivered something remarkably similar in record time.
