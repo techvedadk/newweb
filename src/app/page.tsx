@@ -9,27 +9,29 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import bloc from '@/images/clients/bloc/logo-light.svg'
+import google from '@/images/clients/google/logo-light.svg'
+import riverpod from '@/images/clients/riverpod/logo-light.svg'
+import etiya from '@/images/clients/etiya/logo-light.svg'
+import stride from '@/images/clients/stride/logo-light.png'
+import bearPeak from '@/images/clients/bearpeak/logo-light.svg'
+import strapt from '@/images/clients/strapt/logo-light.svg'
+import minlandsBy from '@/images/clients/minlandsby/logo-light.svg'
+import overlapp from '@/images/clients/overlapp/logo-light.png'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
-  ['Overlapp', logoPhobiaLight],
-  ['StudentsofStrength', logoFamilyFund],
-  ['Planteka', logoUnseal],
-  ['Sponsors', logoMailSmirk],
-  ['MailCloud', logoHomeWork],
-  ['NotifyLife', logoGreenLife],
-  ['EventPath', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Google', google],
+  ['Bloc', bloc],
+  ['Riverpod', riverpod],
+  ['Etiya', etiya],
+  ['BearPeak', bearPeak],
+  ['Strapt', strapt],
+  ['MinlandsBy', minlandsBy],
+  ['Stride', stride],
+  ['Overlapp', overlapp],
 ]
 
 function Clients() {
@@ -50,7 +52,7 @@ function Clients() {
             {clients.map(([client, logo]) => (
               <li key={client}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={client} height={80} unoptimized />
                 </FadeIn>
               </li>
             ))}
