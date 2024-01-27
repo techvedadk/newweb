@@ -20,6 +20,7 @@ import bearPeak from '@/images/clients/bearpeak/logo-light.svg'
 import strapt from '@/images/clients/strapt/logo-light.svg'
 import minlandsBy from '@/images/clients/minlandsby/logo-light.svg'
 import overlapp from '@/images/clients/overlapp/logo-light.png'
+import sos from '@/images/clients/sos/logo-light.png'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -36,18 +37,29 @@ function CaseStudies({
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
+				{caseStudies.map((caseStudy, i) => (
           <FadeIn key={caseStudy.client}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <Image
+										{
+											i == 0 || i == 1 ? (
+												<Image
+													src={caseStudy.logo}
+													alt=""
+													className=" h-16 flex-none bg-slate-950"
+													unoptimized
+												/>
+											) : (
+													<Image
                       src={caseStudy.logo}
                       alt=""
-                      className="h-16 w-16 flex-none"
+														className="h-16 w-16 flex-none"
                       unoptimized
                     />
+											)
+										}
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
                     </h3>
@@ -72,14 +84,14 @@ function CaseStudies({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className="mt-8 flex">
+									{/* <div className="mt-8 flex">
                     <Button
                       href={caseStudy.href}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
                       Read case study
                     </Button>
-                  </div>
+                  </div> */}
                   {caseStudy.testimonial && (
                     <Blockquote
                       author={caseStudy.testimonial.author}
@@ -107,7 +119,8 @@ const clients = [
   ['Strapt', strapt],
   ['MinlandsBy', minlandsBy],
   ['Stride', stride],
-  ['Overlapp', overlapp],
+	['Overlapp', overlapp],
+	['SoS', sos]
 ]
 
 function Clients() {
@@ -157,7 +170,7 @@ export default async function Work() {
         <p>
           We believe in efficiency and maximizing our resources to provide the
           best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+					the open source projects that thousands of people have been developing for the past decade.
         </p>
       </PageIntro>
 
@@ -165,9 +178,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: google }}
+				client={{ name: 'MinLandsby', logo: minlandsBy }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
+				We approached <em>Techveda</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
 

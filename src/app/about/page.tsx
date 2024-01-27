@@ -39,8 +39,7 @@ function Culture() {
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+						Our team has been working full hours to make sure our absurd commitments are met.
           </GridListItem>
           <GridListItem title="Trust" invert>
             We don’t care when our team works just as long as they are working
@@ -201,9 +200,9 @@ export default async function About() {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+					<StatListItem value="4" label="Awesome employees" />
+					<StatListItem value="15" label="Placated clients" />
+					<StatListItem value="$5M" label="In Equity" />
         </StatList>
       </Container>
 

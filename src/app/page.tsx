@@ -18,6 +18,7 @@ import stride from '@/images/clients/stride/logo-light.png'
 import bearPeak from '@/images/clients/bearpeak/logo-light.svg'
 import strapt from '@/images/clients/strapt/logo-light.svg'
 import minlandsBy from '@/images/clients/minlandsby/logo-light.svg'
+import sos from '@/images/clients/sos/logo-light.png'
 import overlapp from '@/images/clients/overlapp/logo-light.png'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -31,7 +32,8 @@ const clients = [
   ['Strapt', strapt],
   ['MinlandsBy', minlandsBy],
   ['Stride', stride],
-  ['Overlapp', overlapp],
+	['Overlapp', overlapp],
+	['SOS', sos],
 ]
 
 function Clients() {
@@ -155,7 +157,7 @@ function Services() {
             </ListItem>
             <ListItem title="Application development">
               We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+							app frameworks and mobile frameworks. 
             </ListItem>
             <ListItem title="E-commerce">
               We are at the forefront of modern e-commerce development. Which
@@ -187,7 +189,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-						Customers-appreciated development studio based in Denmark.
+						MVP in 5 days. Gauranteed.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
 						We are a tech studio working at the intersection of design
@@ -203,11 +205,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+				client={{ name: 'Minlandsby', logo: minlandsBy }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+				The team at Techveda went above and beyond with our onboarding, transtioning legacy apps to Flutter and making web apps in record time.
       </Testimonial>
 
       <Services />
