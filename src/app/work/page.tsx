@@ -77,7 +77,7 @@ function CaseStudies({
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
+										<p>{caseStudy.title}</p>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
                     {caseStudy.summary.map((paragraph) => (
