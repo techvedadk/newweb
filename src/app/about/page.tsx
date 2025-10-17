@@ -45,7 +45,7 @@ function Culture() {
             Trust is foundational to everything we do. We operate with transparency, maintain open communication, and take full accountability for our commitments. Our clients trust us to deliver results, and we earn that trust every day through integrity and expertise.
           </GridListItem>
           <GridListItem title="Compassion" invert>
-            We understand that behind every project are real business challenges and aspirations. We approach each engagement with empathy, listening carefully to our clients' needs and crafting solutions that genuinely address their pain points and drive meaningful outcomes.
+            We understand that behind every project are real business challenges and aspirations. We approach each engagement with empathy, listening carefully to our clients&apos; needs and crafting solutions that genuinely address their pain points and drive meaningful outcomes.
           </GridListItem>
         </GridList>
       </Container>
