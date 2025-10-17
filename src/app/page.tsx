@@ -77,9 +77,7 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          We leverage cutting-edge technology to unlock enterprise value and competitive advantage. Our proven expertise in AI, AR/VR, and application development helps organizations overcome complex digital challenges and achieve transformational business outcomes.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -134,8 +132,7 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          We provide comprehensive digital solutions across AI integration, augmented reality experiences, mobile applications, and web platforms. Our consultative approach ensures strategic alignment with your business objectives and maximum ROI on technology investments.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -151,23 +148,16 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              We build scalable, high-performance web applications that drive user engagement and revenue growth. Our expertise spans modern frameworks and responsive design, delivering enterprise-grade solutions tailored to your business needs.
             </ListItem>
             <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-							app frameworks and mobile frameworks. 
+              We design and develop feature-rich mobile and cross-platform applications using cutting-edge technologies. Our team delivers robust solutions that enhance user experience and accelerate time-to-market for your digital initiatives.
             </ListItem>
             <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+              We build sophisticated e-commerce platforms optimized for conversion and customer retention. From marketplace integrations to payment processing, we deliver end-to-end solutions that maximize your digital commerce potential.
             </ListItem>
             <ListItem title="Custom content management">
-              At Techveda we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              We architect and implement flexible, scalable CMS solutions that empower your team to manage digital content efficiently. Our bespoke systems integrate seamlessly with your existing infrastructure and evolve with your business requirements.
             </ListItem>
           </List>
         </div>
@@ -192,9 +182,7 @@ export default async function Home() {
 						Make AI work for you in 10 days.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-						We are a tech studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+						We are a software development studio driving digital transformation through AI, AR/VR, mobile, and web applications. We partner with enterprises to maximize their IT investments and accelerate their digital journey.
           </p>
         </FadeIn>
       </Container>

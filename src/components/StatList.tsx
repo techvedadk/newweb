@@ -9,7 +9,7 @@ export function StatList({
 }) {
   return (
     <FadeInStagger {...props}>
-      <dl className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:auto-cols-fr lg:grid-flow-col lg:grid-cols-none">
+      <dl className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {children}
       </dl>
     </FadeInStagger>

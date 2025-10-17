@@ -39,15 +39,13 @@ function Culture() {
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Loyalty" invert>
-						Our team has been working full hours to make sure our absurd commitments are met.
+            We build long-term partnerships with our clients, committed to their sustained success and growth. Our team is dedicated to delivering consistent excellence and standing by our clients through every phase of their digital transformation journey.
           </GridListItem>
           <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+            Trust is foundational to everything we do. We operate with transparency, maintain open communication, and take full accountability for our commitments. Our clients trust us to deliver results, and we earn that trust every day through integrity and expertise.
           </GridListItem>
           <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+            We understand that behind every project are real business challenges and aspirations. We approach each engagement with empathy, listening carefully to our clients' needs and crafting solutions that genuinely address their pain points and drive meaningful outcomes.
           </GridListItem>
         </GridList>
       </Container>
@@ -185,24 +183,19 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Techveda was started after we noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Techveda was founded on the principle that exceptional technology should be accessible and affordable. We recognized that enterprises were overpaying for mediocre solutions from traditional development studios. Our mission is to deliver world-class AI, AR/VR, mobile, and web development services at competitive rates, without compromising on quality or innovation.
           </p>
           <p>
-            At Techveda, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Our team is composed of passionate technologists, designers, and strategists united by a shared commitment to client success. We foster a collaborative culture where continuous learning and professional growth are prioritized, enabling our experts to stay at the forefront of emerging technologies and deliver cutting-edge solutions that drive measurable business impact.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-					<StatListItem value="4" label="Awesome employees" />
-					<StatListItem value="15" label="Placated clients" />
-					<StatListItem value="$5M" label="In Equity" />
+					<StatListItem value="35" label="Years of combined experience" />
+					<StatListItem value="15" label="Projects delivered" />
+					<StatListItem value="7" label="Countries served" />
+					<StatListItem value="25" label="Technologies mastered" />
         </StatList>
       </Container>
 
