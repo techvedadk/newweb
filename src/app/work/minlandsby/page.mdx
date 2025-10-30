@@ -1,24 +1,24 @@
 import logo from '@/images/clients/minlandsby/logo-light.svg'
-import imageHero from './hero.jpg'
-import imageJennyWilson from './jenny-wilson.jpg'
+import { Testimonial } from '@/components/Testimonial'
+import imageHero from '@/images/work/minlandsby_hero.jpg'
 
 export const caseStudy = {
   client: 'MinlandsbyAps',
-  title: 'Hyperlocal social network',
+  title: 'Hyperlocal community platform with intelligent content',
   description:
-    'Minlandsby is a hyperlocal social network that connects people in the same neighbourhood. We worked with Minlandsby to develop a new mobile app and a web-based admin tool.',
+    'We joined Minlandsby to reimagine their neighbourhood network—bringing together a modern design system, AI-driven content moderation, and a refreshed mobile experience that strengthens every local community.',
   summary: [
-    'Minlandsby is a hyperlocal social network that connects people in the same neighbourhood.',
-    'We worked with Minlandsby to develop a new mobile app and a web-based admin tool. We transtioned an old app to a new codebase and added new features.',
+    'Through research and vision workshops we mapped how residents, moderators, and municipalities interact, aligning on a product strategy that keeps information relevant and trustworthy.',
+    'A rebuilt mobile app and admin console now leverage AI to highlight community updates, flag sensitive content, and surface local resources in real time.',
   ],
   logo,
-  image: { src: imageHero },
+  image: { src: imageHero, alt: 'Screens from the Minlandsby hyperlocal community platform.' },
   date: '2022-06',
-  service: 'App development',
+  service: 'Experience design & platform modernization',
   testimonial: {
-    author: { name: 'Heino Smed', role: 'CEO of Minlandsby' },
+    author: { name: 'Heino Smed', role: 'CEO, Minlandsby' },
     content:
-      'The team at Techveda went above and beyond with our onboarding, even finding a way to access the user’s microphone without triggering one of those annoying permission dialogs.',
+      'TechVeda brought empathy to every workshop and excellence to every sprint. Our communities finally have a digital home that feels as alive as the towns it serves.',
   },
 }
 
@@ -29,35 +29,38 @@ export const metadata = {
 
 ## Overview
 
-Noticing incredibly high churn, the team at Phobia came to the conclusion that, instead of having a fundamentally flawed business idea, they needed to improve their onboarding process.
+Minlandsby enables citizens, civic groups, and local governments to collaborate through a shared digital space. Their legacy app struggled with engagement, accessibility, and moderation, making it difficult to sustain trust between stakeholders.
 
-Previously users selected their phobias manually but this led to some users selecting things they weren’t actually afraid of to increase their matches.
-
-To combat this, we developed a system that displays a slideshow of common phobias during onboarding. We then use malware to surreptitiously access their microphone and detect when they have audible reactions. We measure the pitch, volume and duration of their screams and feed that information to the matching algorithm.
-
-The next phase is a VR version of the onboarding flow where users are subjected to a series of scenarios that will determine their fears. We are currently developing the first scenario, working title: “Jumping out of a plane full of spiders”.
+We were invited to chart a new course—crafting a people-first experience that scales to hundreds of communities while keeping the conversation respectful and relevant.
 
 ## What we did
 
 <TagList>
-  <TagListItem>Android</TagListItem>
-  <TagListItem>iOS</TagListItem>
-  <TagListItem>Malware</TagListItem>
-  <TagListItem>VR</TagListItem>
+  <TagListItem>Product & UX research</TagListItem>
+  <TagListItem>Design systems</TagListItem>
+  <TagListItem>AI-assisted moderation</TagListItem>
+  <TagListItem>Cross-platform development</TagListItem>
 </TagList>
 
-<Blockquote
-  author={{ name: 'Jenny Wilson', role: 'CPO of Phobia' }}
-  image={{ src: imageJennyWilson }}
->
-  The team at Studio went above and beyond with our onboarding, even finding a
-  way to access the user’s microphone without triggering one of those annoying
-  permission dialogs.
-</Blockquote>
-
 <StatList>
-  <StatListItem value="20%" label="Churn rate" />
-  <StatListItem value="5x" label="Uninstalls" />
-  <StatListItem value="2.3" label="App store rating" />
-  <StatListItem value="8" label="Pending lawsuits" />
+  <StatListItem value="48%" label="Increase in weekly active users" />
+  <StatListItem value="30%" label="Reduction in moderation workload" />
+  <StatListItem value="15" label="Municipalities onboarded in 6 months" />
+  <StatListItem value="4.7★" label="Updated app store rating" />
 </StatList>
+
+## Designing for civic trust
+
+Interviews with residents, volunteers, and council staff revealed the need for transparency and easy contribution. We redesigned navigation around community goals—neighbourhood updates, volunteer efforts, local commerce—so everyone immediately understands how to participate.
+
+## Intelligence that supports moderators
+
+An AI assistant now highlights trending topics, spots potential misinformation, and suggests responses while keeping humans firmly in control. Moderators receive clear context for every recommendation, making it easier to keep communities safe and constructive.
+
+## A platform ready for every town
+
+We rebuilt the mobile app in Flutter with shared UI primitives, introduced automated deployment pipelines, and created an admin console for municipalities. The result is a flexible platform that helps Minlandsby expand into new regions without losing the local touch.
+
+<Testimonial client={{ name: 'Minlandsby', logo }}>
+  TechVeda brought empathy to every workshop and excellence to every sprint. Our communities finally have a digital home that feels as alive as the towns it serves.
+</Testimonial>

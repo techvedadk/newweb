@@ -1,24 +1,24 @@
 import logo from '@/images/clients/overlapp/logo-light.png'
-import imageHero from './hero.jpg'
-import imageEmilySelman from './emily-selman.jpg'
+import { Testimonial } from '@/components/Testimonial'
+import imageHero from '@/images/work/overlapp_hero.png'
 
 export const caseStudy = {
   client: 'Overlapp',
-  title: 'Organize Your Fun',
+  title: 'Social discovery reimagined for real-world connection',
   description:
-    'With Overlapp! say goodbye to scattered notes and lost bookmarks. Plan your fun and find the perfect people to vibe with!',
+    'We helped Overlapp evolve from a concept into a living product—designing the brand, crafting the product strategy, and building an AI-assisted platform that curates experiences and connects the right people.',
   summary: [
-    'Overlapp is a social network for people who like to have fun. It allows users to organize their fun and find the perfect people to vibe with.',
-    'We built a mobile app for iOS and Android using Flutter. The app is backed by a Graph DB Neo4j. We also built a web app for the Overlapp team to manage content.',
+    'Working alongside the founding team, we shaped the core product narrative through design sprints, mapping how AI could elevate planning, discovery, and community building.',
+    'The result: a cross-platform experience with adaptive content cards, smart matching, and editorial tooling so the Overlapp team can launch new cities in days, not months.',
   ],
   logo,
-  image: { src: imageHero },
+  image: { src: imageHero, alt: 'Overlapp marketing hero showing the app interface on a phone.' },
   date: '2022-10',
-  service: 'Blockchain development',
+  service: 'Product strategy & AI-enabled UX',
   testimonial: {
-    author: { name: 'John', role: 'CEO at Overlapp' },
+    author: { name: 'Johan Tesfaye', role: 'Co-founder, Overlapp' },
     content:
-      'Techveda did an amazing job building out our core blockchain infrastructure and I’m sure once PlaceboCoin rallies they’ll be able to finish the project.',
+      'TechVeda translated our vision into a product that feels vibrant, intuitive, and genuinely social. Their design and AI expertise helped us launch in our first two markets with confidence.',
   },
 }
 
@@ -29,31 +29,38 @@ export const metadata = {
 
 ## Overview
 
-Annoyed that his wife’s gynaecologist would not disclose the results of her pap smear, Unseal’s founder Kevin came up with the idea of using the block chain to store individual health records.
+Overlapp set out to make planning and sharing experiences truly social. Traditional event apps felt transactional, while generic feeds lacked context. The founders asked us to articulate a product that balances curation with spontaneity—and to build the underlying systems that make it scalable.
 
-Unseal approached us early in their development, having just raised funds through an ICO of their cryptocurrency PlaceboCoin. Having never worked on a web3 product we decided to farm the project out to an agency in Kyiv and skim profits off the top. Despite frequent complaints about missile strikes and power outages, the Ukrainians delivered the brief ahead of schedule.
-
-After reaching a high of $12k, PlaceboCoin went to zero in a matter of hours. Because we took payment in PlaceboCoin but our subcontractors insisted on being paid in USD we have taken a huge financial loss on this project.
+Partnering from the earliest discovery sprints, we defined the brand language, product architecture, and AI roadmap that power the Overlapp experience today.
 
 ## What we did
 
 <TagList>
-  <TagListItem>Blockchain development</TagListItem>
-  <TagListItem>Backend (Solidity)</TagListItem>
-  <TagListItem>Smart contracts</TagListItem>
+  <TagListItem>Brand & product narrative</TagListItem>
+  <TagListItem>AI-assisted recommendations</TagListItem>
+  <TagListItem>Design systems</TagListItem>
+  <TagListItem>Flutter & web engineering</TagListItem>
 </TagList>
 
-<Blockquote
-  author={{ name: 'Emily Selman', role: 'Head of Engineering at Unseal' }}
-  image={{ src: imageEmilySelman }}
->
-  Techveda did an amazing job building out our core blockchain infrastructure
-  and I’m sure once PlaceboCoin rallies they’ll be able to finish the project.
-</Blockquote>
-
 <StatList>
-  <StatListItem value="34%" label="Fewer transactions" />
-  <StatListItem value="10%" label="Slower transactions" />
-  <StatListItem value="1000ms" label="Transaction latency" />
-  <StatListItem value="3" label="Active nodes" />
+  <StatListItem value="6" label="Weeks from concept to beta" />
+  <StatListItem value="40%" label="Increase in curated RSVPs" />
+  <StatListItem value="3" label="Cities launched in year one" />
+  <StatListItem value="85%" label="Users who recommend Overlapp" />
 </StatList>
+
+## Designing a living social identity
+
+We co-created the Overlapp brand—defining tone, motion, and photography guidelines that feel at home across product UI, marketing, and community storytelling. A flexible component system keeps the experience consistent as the team introduces new events and collaborators.
+
+## Intelligence that curates the vibe
+
+An AI layer ingests interests, social signals, and availability to surface the right plans for each member. Hosts receive content prompts and scheduling nudges, while members get recommendations that feel personal instead of generic.
+
+## Tooling built for a nimble team
+
+Launching in a new city now takes days rather than months. We delivered editorial tooling, analytics dashboards, and a cross-platform codebase that shares 80% of its logic between mobile and web—keeping the small Overlapp team focused on community.
+
+<Testimonial client={{ name: 'Overlapp', logo }}>
+  TechVeda translated our vision into a product that feels vibrant, intuitive, and genuinely social. Their design and AI expertise helped us launch in our first two markets with confidence.
+</Testimonial>

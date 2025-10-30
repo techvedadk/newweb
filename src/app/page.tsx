@@ -2,9 +2,11 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { GridList, GridListItem } from '@/components/GridList'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
@@ -20,7 +22,7 @@ import strapt from '@/images/clients/strapt/logo-light.svg'
 import minlandsBy from '@/images/clients/minlandsby/logo-light.svg'
 import sos from '@/images/clients/sos/logo-light.png'
 import overlapp from '@/images/clients/overlapp/logo-light.png'
-import imageLaptop from '@/images/laptop.jpg'
+import imageWhiteboard from '@/images/whiteboard.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -42,7 +44,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Trusted by product teams shaping the future
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -73,47 +75,71 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-				title="We build software that delights users and drives business growth"
+        title="Designing intelligent products with measurable impact"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We leverage cutting-edge technology to unlock enterprise value and competitive advantage. Our proven expertise in AI, AR/VR, and application development helps organizations overcome complex digital challenges and achieve transformational business outcomes.
+          We blend design craft with emerging technology to deliver experiences that feel intuitive, beautiful, and unmistakably smart. Each engagement pairs rigorous discovery with rapid experimentation so products launch with confidence and purpose.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
+              <article className="group relative flex w-full flex-col overflow-hidden rounded-3xl border border-neutral-950/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <Link href={caseStudy.href} className="absolute inset-0 z-10">
+                  <span className="sr-only">Read case study: {caseStudy.client}</span>
+                </Link>
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image
+                    {...caseStudy.image}
+                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent transition duration-500 group-hover:from-neutral-950/60" />
+                  <div className="absolute bottom-4 left-4 flex items-center gap-x-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur">
+                      <Image src={caseStudy.logo} alt={caseStudy.client} className="h-8 w-8" unoptimized />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{caseStudy.client}</p>
+                      <p className="text-xs uppercase tracking-wide text-white/70">{caseStudy.service}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative z-0 flex flex-1 flex-col p-6 sm:p-8">
+                  <p className="flex gap-x-2 text-sm text-neutral-500">
+                    <time dateTime={caseStudy.date.split('-')[0]} className="font-semibold text-neutral-950">
+                      {caseStudy.date.split('-')[0]}
+                    </time>
+                    <span aria-hidden="true">•</span>
+                    <span>Case study</span>
+                  </p>
+                  <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950">
+                    {caseStudy.title}
+                  </h3>
+                  <p className="mt-4 flex-1 text-base text-neutral-600">
+                    {caseStudy.description}
+                  </p>
+                  <div className="mt-6 text-sm font-semibold text-neutral-950">
+                    <span className="inline-flex items-center gap-2">
+                      View project
+                      <svg
+                        viewBox="0 0 16 16"
+                        aria-hidden="true"
+                        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        <path
+                          d="m5.25 3 4.5 5-4.5 5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
               </article>
             </FadeIn>
           ))}
@@ -123,16 +149,16 @@ function CaseStudies({
   )
 }
 
-function Services() {
+function Capabilities() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow="Capabilities"
+        title="Where strategy, design, and intelligent technology converge."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We provide comprehensive digital solutions across AI integration, augmented reality experiences, mobile applications, and web platforms. Our consultative approach ensures strategic alignment with your business objectives and maximum ROI on technology investments.
+          Our interdisciplinary teams move seamlessly from insight to implementation, combining human-centered design with AI-native engineering. We create digital experiences that feel refined, responsible, and ready to scale.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -140,24 +166,24 @@ function Services() {
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
-                src={imageLaptop}
+                src={imageWhiteboard}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
               />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We build scalable, high-performance web applications that drive user engagement and revenue growth. Our expertise spans modern frameworks and responsive design, delivering enterprise-grade solutions tailored to your business needs.
+            <ListItem title="AI-enabled product design">
+              We discover the right problems to solve and design intelligent experiences—from conversational interfaces to adaptive dashboards—that empower people without overwhelming them.
             </ListItem>
-            <ListItem title="Application development">
-              We design and develop feature-rich mobile and cross-platform applications using cutting-edge technologies. Our team delivers robust solutions that enhance user experience and accelerate time-to-market for your digital initiatives.
+            <ListItem title="Experience & interaction design">
+              Our designers craft rich, multi-sensory journeys across web, mobile, and immersive environments, balancing storytelling with measurable product outcomes.
             </ListItem>
-            <ListItem title="E-commerce">
-              We build sophisticated e-commerce platforms optimized for conversion and customer retention. From marketplace integrations to payment processing, we deliver end-to-end solutions that maximize your digital commerce potential.
+            <ListItem title="Intelligent platforms & engineering">
+              We architect flexible systems and integrate AI responsibly so your digital products remain performant, maintainable, and poised for continuous innovation.
             </ListItem>
-            <ListItem title="Custom content management">
-              We architect and implement flexible, scalable CMS solutions that empower your team to manage digital content efficiently. Our bespoke systems integrate seamlessly with your existing infrastructure and evolve with your business requirements.
+            <ListItem title="Brand systems for tech teams">
+              We define visual languages, design systems, and motion principles that keep every touchpoint cohesive from pitch decks to product UI.
             </ListItem>
           </List>
         </div>
@@ -166,9 +192,44 @@ function Services() {
   )
 }
 
+function Process() {
+  return (
+    <>
+      <SectionIntro
+        eyebrow="Process"
+        title="A design-led approach to building with AI."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Every engagement is collaborative, transparent, and grounded in experimentation. We align stakeholders early, iterate with real users, and ship thoughtfully orchestrated releases that evolve with your product vision.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Discover the opportunity">
+            Facilitate workshops, audit data, and surface user insights to define the business challenge and the role AI should play.
+          </GridListItem>
+          <GridListItem title="Design the experience">
+            Translate insight into concept narratives, interaction models, and high-fidelity prototypes that make the future tangible.
+          </GridListItem>
+          <GridListItem title="Build intelligently">
+            Pair engineers and designers to implement scalable systems, integrating AI responsibly with clear guardrails and observability.
+          </GridListItem>
+          <GridListItem title="Launch with confidence">
+            Orchestrate rollout plans, measure user impact, and capture feedback so the experience lands smoothly across every touchpoint.
+          </GridListItem>
+          <GridListItem title="Evolve continuously">
+            Establish growth rituals—testing, analytics, and iteration loops—to keep products learning and delivering compounding value.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </>
+  )
+}
+
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'TechVeda is a design-led AI studio crafting intelligent digital products, experiences, and platforms for visionary teams.',
 }
 
 export default async function Home() {
@@ -179,11 +240,17 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-						Make AI work for you in 10 days.
+            Designing intelligent digital experiences that feel human.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-						We are a software development studio driving digital transformation through AI, AR/VR, mobile, and web applications. We partner with enterprises to maximize their IT investments and accelerate their digital journey.
+            TechVeda blends design thinking with AI-native engineering to imagine, prototype, and launch products that move businesses forward. From first sketch to live platform, we craft work that is beautiful, responsible, and built to scale.
           </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button href="/contact">Book a discovery call</Button>
+            <Button href="/work" invert>
+              Explore our work
+            </Button>
+          </div>
         </FadeIn>
       </Container>
 
@@ -198,7 +265,9 @@ export default async function Home() {
 				The team at Techveda went above and beyond with our onboarding, transtioning legacy apps to Flutter and making web apps in record time.
       </Testimonial>
 
-      <Services />
+      <Capabilities />
+
+      <Process />
 
       <ContactSection />
     </>
