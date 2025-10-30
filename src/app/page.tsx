@@ -93,6 +93,10 @@ function CaseStudies({
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
                     {...caseStudy.image}
+                    alt={
+                      caseStudy.image?.alt ??
+                      `${caseStudy.client} project visual`
+                    }
                     className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent transition duration-500 group-hover:from-neutral-950/60" />
