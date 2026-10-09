@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/Button'
+import { AIPracticeAnnouncement } from '@/components/AIPracticeAnnouncement'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -241,6 +242,7 @@ export default async function Home() {
 
   return (
     <>
+      <AIPracticeAnnouncement />
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
@@ -253,6 +255,9 @@ export default async function Home() {
             <Button href="/contact">Book a discovery call</Button>
             <Button href="/work" invert>
               Explore our work
+            </Button>
+            <Button href="https://ai.techveda.dk/" target="_blank" rel="noopener noreferrer">
+              Go to AI practice
             </Button>
           </div>
         </FadeIn>
